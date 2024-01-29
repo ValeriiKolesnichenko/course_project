@@ -1,0 +1,22 @@
+{% extends 'chess_blog/base_2.html'%}
+
+{% block title %} Register user {% endblock %}
+{% block content %}
+    <div class="features" style="margin-left: 300px;">
+        <h1>Welcome to the Chess World-Forum!</h1>
+        <h3>Fill in the registration form</h3>
+        <form method="post"  action="{% url 'register_user' %}" style="margin-top: 20px;">
+            {% csrf_token %}
+            {{form}}
+            <button class="btn btn-success" type="submit">Register</button>
+              <div class="text-center">
+          Do you already have an account? <a href="{% url 'login_user' %}">Login here</a>
+            </div>
+        </form>
+        <a href="{% url 'home' %}">
+            <button class="btn btn-danger" style="position: absolute; top: 20px; right: 35px;">
+                <i class="fas fa-house" style="margin-right: 7px;"></i>Home page
+            </button>
+        </a>
+    </div>
+{% endblock %}

@@ -1,0 +1,145 @@
+body {
+    background: gold;
+}
+
+aside {
+    float: left;
+    background: aqua;
+    width: 22%;
+    padding: 2%;
+    height: 100vh;
+    color: black;
+    border-right: 4px solid white;
+    position: fixed;
+}
+
+aside img{
+    width: 240px;
+    height: 230px;
+    float: left;
+}
+
+aside .logo{
+    font-size: 40px;
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+aside h3 {
+    margin-left: 20px;
+    margin-top: 35px;
+    font-size: 30px;
+}
+
+aside ul li {
+    color: darkblue;
+    margin-top: 8px;
+    transition: transform .3s ease
+}
+
+aside ul a {
+    text-decoration: none;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: bisque;
+    transform: scale(1.07);
+}
+
+main .features {
+    float: left;
+    margin-top: 50px;
+    text-align: center;
+    width: 70%;
+}
+
+aside .btn.btn-success {
+    margin-top: 50px;
+}
+
+form {
+    margin-left: 26%;
+    width: 600px;
+    margin-top: 50px;
+}
+
+form textarea {
+    height: 200px;
+}
+
+div form button.btn.btn-success {
+    margin-top: 40px;
+}
+
+div .text-center {
+    margin-top: 17px;
+}
+
+.features h1 {
+    margin-left: 100px;
+}
+
+.features h3 {
+    margin-left: 100px
+}
+
+.footer {
+  padding: 10px 0;
+  background: #061D25;
+}
+
+footer a:first-child {
+  border-left: 1px solid #70726F;
+}
+
+.footer a {
+  background: white
+  color: #70726F;
+  font-size: 20px;
+  padding: 10px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+footer {
+    margin-top: 210px;
+}
+
+aside a button btn.btn-success {
+    margin-left: 80px;
+}
+
+.footer {
+    margin-top: 200px;
+}
+
+div.features h1.category-title {
+    font-style: italic;
+    color: darkblue;
+}
+
+.show-article-checkbox {
+        display: none;
+}
+
+.show-article-label {
+    cursor: pointer;
+}
+
+.show-article-checkbox:checked + .show-article-label + .full-article {
+    display: block;
+}
+
+.full-article {
+    display: none;
+    margin-top: 10px;
+}
+
+
+
+
+

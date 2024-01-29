@@ -1,0 +1,18 @@
+{% extends 'chess_blog/base_2.html'%}
+
+{% block title %} Add article form {% endblock %}
+
+{% block content %}
+    <div class="features" style="margin-left: 300px;">
+        <h1>Add article form</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.title}}<br>
+            {{ form.content}}<br>
+            {{ form.category}}<br>
+            <span> {{ error}} </span>
+            <button class="btn btn-success" type="submit">Add article</button>
+        </form>
+           <a href="{% url 'home' %}"><button class="btn btn-danger" style="position: absolute; bottom: 35px; right: 35px;">Home page</button></a>
+    </div>
+{% endblock %}

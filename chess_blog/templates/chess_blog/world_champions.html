@@ -1,0 +1,27 @@
+{% extends 'chess_blog/base_2.html' %}
+
+{% block title %} World Champions {% endblock %}
+
+{% block content %}
+    <div class="features" style="margin-left: 380px;">
+        <h1 class="category-title" style="margin-left: 30px;">World Champions</h1>
+        {% for post in posts %}
+            <h2 style="margin-top: 25px;">{{ post.title }}</h2>
+            <p style="font-style: italic;">{{ post.content|linebreaks|truncatewords:50 }}</p>
+            <p class="link-read-post"><a href="{% url 'post' post.pk %}" class="btn btn-primary" role="button" data-bs-toggle="button">Read full article</a></p>
+            <h4 style="font-style: italic; color: darkblue;">Author: {{ post.author.username }}</h4>
+            <h5 style="font-style: italic; color: darkviolet;">Publication Date: {{ post.publication_date }}</h5>
+            <a href="{% url 'home' %}">
+                <button class="btn btn-danger" style="position: absolute; top: 20px; right: 35px;">
+                    <i class="fas fa-house" style="margin-right: 7px;"></i>Home page
+                </button>
+            </a>
+
+            <!-- Додайте інші необхідні вам поля з моделі ChessPost -->
+
+            <!-- Додайте форму для коментарів, якщо потрібно -->
+
+            <hr>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'chess_blog/base_2.html'%}
+
+{% block title %} Add comment form {% endblock %}
+
+{% block content %}
+    <div class="features" style="margin-left: 300px;">
+        <h1>Leave the comment</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.content}}<br>
+            <span> {{ error}} </span>
+            <button class="btn btn-secondary" style="margin-top: 15px; margin-bottom: 10px;">
+                <i class="fas fa-square-plus" style="margin-right: 7px;"></i>Leave the comment
+            </button>
+        </form>
+           <a href="{% url 'home' %}"><button class="btn btn-danger" style="position: absolute; bottom: 35px; right: 35px;">Home page</button></a>
+    </div>
+{% endblock %}

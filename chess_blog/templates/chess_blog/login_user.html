@@ -1,0 +1,20 @@
+{% extends 'chess_blog/base_2.html'%}
+
+{% block title %} Login user {% endblock %}
+{% block content %}
+    <div class="features" style="margin-left: 300px;">
+        <h3>Log in form</h3>
+        <form method="post" action="{% url 'login_user' %}">
+            {% csrf_token %}
+            {{form}}
+            <button class="btn btn-success" type="submit">Log in</button>
+        </form>
+        <a href="{% url 'home' %}">
+            <button class="btn btn-danger" style="position: absolute; top: 20px; right: 35px;">
+                <i class="fas fa-house" style="margin-right: 7px;"></i>Home page
+            </button>
+        </a>
+         <div style="position: fixed; bottom: 0; left: 50%; margin: 20px;">
+            Need an account? <a href="{% url 'register_user' %}">Register here</a>
+        </div>
+{% endblock %}
