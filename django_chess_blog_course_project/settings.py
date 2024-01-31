@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'r91j0e(gx$=%-*!1+=9+gn#^2vz#m*b+cva!0=2f4px97#@g4s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['VaLeRka228.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -130,20 +130,3 @@ STATICFILES_DIRS = [
     BASE_DIR / "chess_blog/static/chess_blog/",
 ]
 
-LOGIN_REDIRECT_URL = '/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_HSTS_SECONDS = 31536000  # Один рік
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SESSION_COOKIE_DOMAIN = '.example.com'
-ALLOWED_UPLOAD_FILE_TYPES = ['image/png', 'image/jpeg']
-MAX_UPLOAD_SIZE = 5242880  # 5 MB
-SECURE_CONTENT_TYPE_NOSNIFF = True
-X_FRAME_OPTIONS = 'DENY'
-SECURE_BROWSER_XSS_FILTER = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
-ALLOWED_ADMIN_IPS = ['127.0.0.1', '192.168.1.1']
-SECURE_HSTS_PRELOAD = True
