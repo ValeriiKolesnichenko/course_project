@@ -20,7 +20,7 @@ def register_user(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return HttpResponseRedirect(reverse('home'))
+            return HttpResponseRedirect('http://127.0.0.1:8000/')
         else:
             print(form.errors)
     return render(request, 'chess_blog/register_user.html', {'form': form})
@@ -35,7 +35,7 @@ def login_user(request):
             user = authenticate(request, username=username, password=password)
             if user:
                 login(request, user)
-                return HttpResponseRedirect('http://127.0.0.1:8000/home')
+                return HttpResponseRedirect('http://127.0.0.1:8000/')
     else:
         form = AuthenticationFormWithPlaceholder()
     return render(request, 'chess_blog/login_user.html', {'form': form})
@@ -49,7 +49,7 @@ def add_article(request):
             post = form.save(commit=False)
             post.author = request.user
             post.save()
-            return HttpResponseRedirect('http://127.0.0.1:8000/home')
+            return HttpResponseRedirect('http://127.0.0.1:8000/')
     else:
         form = ChessPostForm()
 
@@ -76,7 +76,7 @@ def add_comment(request, post_id):
 def logout_user(request):
     if request.method == 'POST':
         logout(request)
-        return redirect('home')
+        return redirect('/')
 
 
 def world_champions(request):
